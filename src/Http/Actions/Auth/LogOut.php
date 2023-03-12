@@ -36,9 +36,9 @@ class LogOut implements ActionInterface
             return new ErrorResponse($e->getMessage());
         }
 
-        //создаем новый токен c нулевым сроком годности
+        //создаем новый объект токена c нулевым сроком годности
         $authToken = new AuthToken(
-            // Случайная строка длиной 40 символов
+            // существующий токен
             $this->authentication->getToken(),
             $author->id(),
             // Срок годности - 1 день
