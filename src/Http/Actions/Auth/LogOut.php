@@ -28,7 +28,7 @@ class LogOut implements ActionInterface
     }
     public function handle(Request $request): Response
     {
-        // проверить юзера и его токен по запросу
+        // проверяем юзера и его токен по запросу
         try {
             $author = $this->authentication->user($request);
 
